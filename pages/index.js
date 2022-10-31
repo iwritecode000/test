@@ -4,6 +4,7 @@ import styles from '../styles/Home.module.css'
 import Blogcards from '../components/Blogcards'
 import Tourcards from '../components/Tourcards'
 import Navbar from '../components/Navbar'
+import Header from '../components/Header'
 import Link from 'next/link'
 
 export default function Home() {
