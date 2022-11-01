@@ -5,6 +5,7 @@ import Blogcards from '../components/Blogcards'
 import Tourcards from '../components/Tourcards'
 import Navbar from '../components/Navbar'
 import Header from '../components/Header'
+import Service from '../components/Service'
 import Link from 'next/link'
 
 export default function Home() {
@@ -18,6 +19,7 @@ export default function Home() {
   
       <Navbar />
       <Header/>
+      <Service/>
       <Blogcards />
       <Tourcards />
     </>
