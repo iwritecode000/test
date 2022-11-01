@@ -7,6 +7,7 @@ import Navbar from '../components/Navbar'
 import Header from '../components/Header'
 import Service from '../components/Service'
 import Feature from '../components/Feature'
+import Footer from '../components/Footer'
 import Link from 'next/link'
 
 export default function Home() {
@@ -24,6 +25,7 @@ export default function Home() {
       <Feature/>
       <Blogcards />
       <Tourcards />
+      <Footer/>
     </>
   )
 }
