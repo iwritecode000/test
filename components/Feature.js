@@ -54,7 +54,7 @@ const Feature = () => {
             </div>
           </div>
           <div>
-            <img
+            <Image
               className="object-cover w-full h-56 rounded shadow-lg sm:h-96"
               src="/dunagiri.jpg"
               alt=""
