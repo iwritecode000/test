@@ -49,10 +49,7 @@ const Treks = (props) => {
         })
       }
         
-        
-        
-       
-        </div>
+  </div>
       </div>
     </>
     
@@ -60,7 +57,7 @@ const Treks = (props) => {
 }
 
 export async function getServerSideProps(context) {
-  let headers = { Authorization: `Bearer ${process.env.API_URL}` }
+  let headers = { Authorization: `Bearer ${process.env.API_KEY}` }
     
     let a = await fetch(process.env.API_URL + "/api/products?populate=*", { headers: headers })
     let products = await a.json();
