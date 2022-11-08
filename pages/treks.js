@@ -1,8 +1,7 @@
 import React from 'react'
 import Link from "next/link"
 import Image from 'next/image'
-require('dotenv').config()
-console.log(process.env)
+// require('dotenv').config()
 
 const Treks = (props) => {
   return (
@@ -22,7 +21,8 @@ const Treks = (props) => {
         >
           <div className="flex flex-col h-full">
             <Image
-             src={item.attributes.image.data.attributes.formats.small.url}
+             src={`https://salty-savannah-84149.herokuapp.com${item.attributes.image.data.attributes.formats.small.url}`}
+              
               className="object-cover w-full h-48"
               alt="image"
               height='1000'
@@ -56,10 +56,12 @@ const Treks = (props) => {
   )
 }
 
+// 
+
 export async function getServerSideProps(context) {
-  let headers = { Authorization: `Bearer ${process.env.API_KEY}` }
+  let headers = { Authorization: "Bearer faadf7fdbd16a1a0be4c165b34e0e16cb6b9ca7709e0c47f1e02037e7ca3f7a9de577d901d767724cba93941ce3b5899a19885c32bdab1cc1cd42555e1b70c295de4b727e35fd3c08a5e2b3440208599fb31426ded45358d5689c5ccd65a005253d3321717bdbfed3f8b4b7121c3c4e5befb940dba9f4b843fa7a60fa6884acd" }
     
-    let a = await fetch(process.env.API_URL + "/api/products?populate=*", { headers: headers })
+    let a = await fetch("https://salty-savannah-84149.herokuapp.com/api/products?populate=*", { headers: headers })
     let products = await a.json();
     console.log(products)
     return {
@@ -68,5 +70,7 @@ export async function getServerSideProps(context) {
       },
     }
   }
+
+
 
 export default Treks
